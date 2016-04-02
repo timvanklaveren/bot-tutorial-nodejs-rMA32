@@ -172,7 +172,7 @@ function respond() {
   } 
     else if(request.text && botRegexsex.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://giant.gfycat.com/UnfinishedTanIndianjackal.gif");
+    postMessage("https://pbs.twimg.com/media/Bc7qQnKCQAAy_LJ.jpg");
     this.res.end();
   } 
     else if(request.text && botRegextrev.test(request.text)) {
