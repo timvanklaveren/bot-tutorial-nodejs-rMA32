@@ -5,7 +5,7 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegexreddit = /^\/reddit/;         botRegexreddit = /^\/Reddit/;  
+      botRegexreddit = /^\/reddit/;         botRegexredditagain = /^\/Reddit/;  
       botRegexgethank = /^\/gethankt/;    botRegexemo = /^\/emotim/;      botRegexanimeisbad = /^\/animeisnotreal/;     botRegexdoyou = /^\/doyou/;    
       botRegexfedorabot = /^\/fedorabot/;    botRegextrump1 = /^\/make/;    botRegextrump2 = /^\/small/;    botRegexhowtrump = /^\/how?/;
       botRegexdankmeme = /^\/dankmeme/;    botRegexnondankmeme = /^\/nondankmeme/;    botRegeximtriggered = /^\/imtriggered/;
@@ -34,6 +34,11 @@ function respond() {
     else if(request.text && botRegexanimeisbad.test(request.text)) {
     this.res.writeHead(200);
     postMessage("Anime isn't real you fucking losers. Save your love for the real world. Stop acting like anime is real or better then real life. You're going to be sad and alone if you do nothing but watch anime. Nothing wrong with being antisocial but damn. Some of you weebs take everything too far. Why're you collecting foreign weapons you don't know how to use? That's red flaggy. Put you on a watch list when your clumsy ass sloppily cuts up your grandma cause she wouldn't buy you your narutos. Life is stressful, life is hard.");
+    this.res.end();
+    } 
+  else if(request.text && botRegexredditagain.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("I found this: http://www.reddit.com/r/"+request.text.substring(8,request.text.length));
     this.res.end();
   } 
   else if(request.text && botRegexreddit.test(request.text)) {
