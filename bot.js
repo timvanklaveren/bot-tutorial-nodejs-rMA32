@@ -38,7 +38,7 @@ function respond() {
   } 
   else if(request.text && botRegexreddit.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://www.reddit.com/r/"+request.text.substring(8,request.text.length));
+    postMessage("I found this: http://www.reddit.com/r/"+request.text.substring(8,request.text.length));
     this.res.end();
   }  
     else if(request.text && botRegexdoyou.test(request.text)) {
